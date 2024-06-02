@@ -1,0 +1,153 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--branco);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+.cabecalho::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--preto);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.cabecalho__lista {
+  display: flex;
+  flex-direction: row;
+}
+
+.cabecalho__item{
+  margin: 1rem;
+}
+
+.container__cabecalho-imagem img {
+  width: 120px;
+  height: 40px;
+  border-radius: 0.4rem;
+}
+
+.item__link {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.container__botao-item,
+.container__botao-item-menu {
+  padding: 1rem;
+  color: aliceblue;
+  background-color: var(--verde-escuro);
+  border: 1px solid aliceblue;
+  border-radius: 0.5rem;
+}
+
+.scroll {
+  color: black;
+  background-color: var(--verde-claro);
+}
+
+.menu-hamburguer,
+.menu-hamburguer__icone {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .container__cabecalho-imagem img {
+    margin-bottom: 1rem;
+    width: 120px;
+    height: 50px;
+  }
+
+  .container__cabecalho-secoes,
+  .container__botao {
+    display: none;
+  }
+
+  .menu-hamburguer .menu-hamburguer__icone {
+    display: block;
+  }
+
+  .container__botao-item-menu {
+    margin-bottom: 1rem;
+  }
+
+  .menu-hamburguer {
+    display: flex;
+    margin-left: 10rem;
+  }
+
+  .menu-hamburguer__icone {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .linha {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+  }
+
+  .menu-hamburguer__lista {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    z-index: 999;
+    text-align: center;
+  }
+
+  .mostrar-menu {
+    display: block;
+  }
+
+  .menu-hamburguer__itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-hamburguer__item {
+    padding: 1rem;
+  }
+
+  .item__link {
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container__cabecalho-imagem img {
+    width: 180px;
+    height: auto;
+  }
+
+  .item__link {
+    font-size: 0.9rem;
+  }
+
+  .container__botao-item {
+    padding: 0.8rem;
+  }
+}
