@@ -20,14 +20,14 @@
 }
 
 .home__conteudo-titulo{
-    color: var(--verde-escuro);
+    color: var(--preto);
     font-size: 45px;
     font-weight: bold;
     margin: 1rem 0;
 }
 
 .home__conteudo-profissao{
-    color: var(--verde-claro);
+    color: var(--preto);
     font-weight: bold;
 }
 
