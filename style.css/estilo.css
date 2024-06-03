@@ -1,0 +1,60 @@
+@import url(./reset.css);
+@import url(./cabecalho.css);
+@import url(./home.css);
+@import url(./sobre.css);
+@import url(./especialidades.css);
+@import url(./contato.css);
+@import url(./rodape.css);
+
+
+
+:root {
+    --branco: #ffffff;
+    --cinza-claro: #BDBDBD;
+    --cinza:#545c5c;
+    --preto: #000000;
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-secundaria: 'Poetsen One', cursive;
+    --verde-claro: #2c6f64;
+    --verde-escuro:#1e604e;
+  }
+  
+  body {
+    background-color: var(--branco);
+    color: var(--preto);
+  
+  
+  }
+
+  h1{
+    text-align: center;
+    padding-top: 1rem;
+    color: var(--verde-escuro);
+    font-size: 40px;
+  }
+
+
+  .whatsapp-link {
+    position: fixed;
+    bottom: 50px; /* Distância do fundo da página */
+    right: 20px; /* Distância da direita da página */
+    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+  }
+  
+  .whatsapp-link svg {
+    width: 50px; /* Largura desejada */
+    height: 50px; /* Altura desejada */
+    color: var(--branco);
+    background-color: #24d464;
+    border-radius: 8rem;
+  }
+
+  [data-anime] {
+    opacity: 0; /* Inicia o elemento invisível */
+    transition: opacity 0.8s ease; /* Adiciona uma transição suave para a propriedade opacity */
+  }
+  
+  [data-anime].animate {
+    opacity: 1; /* Define a opacidade para 1 para tornar o elemento visível */
+  }
+  
