@@ -14,16 +14,25 @@ window.addEventListener("scroll", function() {
 });
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const iconeMenu = document.getElementById('icone-menu');
-    const menuLista = document.querySelector('.menu-hamburguer__lista');
+  const iconeMenu = document.getElementById('icone-menu');
+  const menuLista = document.querySelector('.menu-hamburguer__lista');
+  const menuHamburguer = document.querySelector('.menu-hamburguer');
 
-    iconeMenu.addEventListener('click', function() {
-        menuLista.classList.toggle('mostrar-menu');
-    });
+  iconeMenu.addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevents event from bubbling up to the document
+      menuLista.classList.toggle('mostrar-menu');
+  });
+
+  menuHamburguer.addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevents event from bubbling up to the document
+  });
+
+  document.body.addEventListener('click', function() {
+      menuLista.classList.remove('mostrar-menu');
+  });
 });
+
 
 
 
