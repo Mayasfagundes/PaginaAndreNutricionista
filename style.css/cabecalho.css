@@ -42,17 +42,7 @@
   color: var(--branco);
 }
 
-.container__botao-item,
-.container__botao-item-menu {
-  padding: 1rem;
-  color: aliceblue;
-  background-color: var(--verde-escuro);
-  border: 1px solid aliceblue;
-  border-radius: 0.5rem;
-}
-
 .scroll {
-  color: black;
   background-color: var(--verde-claro);
 }
 
@@ -62,10 +52,21 @@
 }
 
 @media only screen and (max-width: 480px) {
+  
+  .container__cabecalho-secoes,
+  .container__botao,
+  .container__botao-cabecalho {
+    display: none;
+  }
+ 
+  .menu-hamburguer .menu-hamburguer__icone {
+    display: block;
+  }
+
   .cabecalho {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+   display: flex;
+  justify-content: space-between; 
+  align-items: center; ;
     padding: 1rem;
     height: auto;
   }
@@ -76,14 +77,6 @@
     height: 50px;
   }
 
-  .container__cabecalho-secoes,
-  .container__botao {
-    display: none;
-  }
-
-  .menu-hamburguer .menu-hamburguer__icone {
-    display: block;
-  }
 
   .container__botao-item-menu {
     margin-bottom: 1rem;
@@ -103,7 +96,7 @@
   .linha {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: var(--branco);
     margin: 5px 0;
   }
 
@@ -111,11 +104,17 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: auto;
     background-color: #f9f9f9;
     z-index: 999;
     text-align: center;
+    justify-content: center;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
   }
 
   .mostrar-menu {

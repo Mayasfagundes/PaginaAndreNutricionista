@@ -1,13 +1,15 @@
 .home{
     background-image: url(../img/Component\ 1.png);
-    background-size:cover; 
-    background-position: center; 
+    background-size:cover;
+    background-position:center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh; 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
+    margin: 0;
+    padding: 0;
 
 
 }
@@ -45,8 +47,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 1rem;
+    margin: 1rem;
+    padding: 1rem;
 }
+
+.icones__home, .botao__consulta {
+  margin-left: 1rem;
+}
+
 
 .icones__home-link{
     text-decoration: none;
@@ -65,7 +73,7 @@
     padding-top: 1rem;
   }
   
-  .home-link, .home-link-secundario {
+  .home-link, .botao__padrao {
     text-decoration: none;
     color: var(--preto);
     padding: 0.8rem;
@@ -73,18 +81,6 @@
     font-weight: bold;
   }
   
-  .home-link {
-    border: 2px solid var(--verde-escuro);
-    color: var(--branco);
-  }
-  
-  .home-link-secundario {
-    padding: 1rem;
-    color: aliceblue;
-    background-color: var(--verde-escuro);
-    border: 1px solid aliceblue;
-    border-radius: 0.5rem;
-  }
   
   @media only screen and (max-width: 768px) {
 
@@ -93,15 +89,11 @@
       width: 100%;
       height: 60vh; 
   }
-
+.home__conteudo{
+  width: 70%;
+  margin-top: 2rem;
+   }
   
-.icones__home-itens{
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
 .home__conteudo-profissao{
   padding-top: 4rem;
   padding-bottom: 0.5rem;
@@ -109,19 +101,17 @@
 }
 
 .home__conteudo-texto{
-  color: var(--preto);
   font-size: 15px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  padding:  1rem;
   margin: 0;
 
   
 }
 
 .home__conteudo-titulo{
-  color: var(--verde-escuro);
   font-size: 25px;
   font-weight: bold;
   margin:  0;
@@ -129,36 +119,14 @@
 
 }
 
-.home-link, .home-link-secundario {
-  text-decoration: none;
-  color: var(--preto);
-  padding: 0.8rem;
-  border-radius: 5px;
-  font-weight: bold;
+
+.container__botao{
+  display: block;
 }
 
-.icones__home-link {
-  margin: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.home-link {
-  border: 2px solid var(--verde-escuro);
-  color: var(--branco);
-  font-size: 10px;
-  padding: 0.5rem;
-
-
-}
-
-.home-link-secundario {
-  padding: 0.5rem;
-  color: aliceblue;
-  background-color: var(--verde-escuro);
-  border: 1px solid aliceblue;
-  border-radius: 0.5rem;
-  font-size: 10px;
-
+.icones__home{
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -167,4 +135,8 @@
 
 
   @media only screen and (max-width: 480px) {
+
+.container__botao{
+  font-size: 12px;
+}
   }

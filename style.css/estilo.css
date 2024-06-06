@@ -26,12 +26,31 @@
   
   }
 
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
   h1{
     text-align: center;
     padding-top: 1rem;
     color: var(--verde-escuro);
     font-size: 40px;
   }
+
+  
+  .botao__consulta {
+    padding: 1rem;
+    color: aliceblue;
+    background-color: var(--verde-escuro);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none; /* Para remover o sublinhado dos links */
+    display: inline-block; /* Para que funcione tanto em <a> quanto em <button> */
+}
+
 
 
   .whatsapp-link {
